@@ -25,10 +25,13 @@ JOIN Sales.SalesOrderDetail AS sod
 ON soh.SalesOrderID=sod.SalesOrderID
 JOIN Production.Product AS p
 ON p.ProductID=sod.ProductID
-WHERE soh.SalesOrderID = 43659
+--WHERE soh.SalesOrderID = 43659
+--Am sesizat greseala, filtrarea trebuia facuta dupa CustomerID / Sales.SalesOrderHeader AS soh
+WHERE soh.CustomerID = 29825
 
 
 
+/*
 --Rezolvat cu valorile pentru [LineTotal] calculate pe baza produsului
 --dintre [Sales.SalesOrderDetail].[OrderQty] si [Sales.SalesOrderDetail].[UnitPrice]
 --fara a tine cont de discount, care daca este diferit de nu reflecta realitatea.
@@ -81,3 +84,4 @@ WHERE soh.SalesOrderID = 43659
 --JOIN Production.Product AS p
 --ON p.ProductID=sod.ProductID
 --WHERE soh.SalesOrderID = 51131
+*/
